@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import axios from "axios";
 
 export class Register extends Component {
     constructor(props){
@@ -55,12 +56,13 @@ export class Register extends Component {
             <div>
                 <div className='container'>
       <div className='row'>
-      <div className='col s6'>
+      <div className='newform'>
+        <h3 style={{textAlign: 'center', marginBottom: 30}}>Register</h3>
         <form onSubmit={(e) => this.submit(e,this.state.id)}>
           <div class="input-field col s12">
             <i class="material-icons prefix">person</i>
             <input onChange={(e) => this.setState({name:e.target.value})} value={this.state.name} type="text" id="autocomplete-input" class="autocomplete"/>
-            <label for="autocomplete-input">Autocomplete</label>
+            <label for="autocomplete-input">Name</label>
           </div>
           <div class="input-field col s12">
             <i class="material-icons prefix">email</i>
